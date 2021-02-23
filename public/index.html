@@ -11,9 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Dosis&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,300;1,700&display=swap" rel="stylesheet">
 
+    <!-- Arrow Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -23,8 +27,14 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>Hi, tweeter!</span>
+    <nav class="nav-bar">
+      <div class="nav-logo">
+        <span>Tweeter</span>
+      </div>
+      <div class="nav-newTweet">
+        <span><strong>Write</strong> a new tweet</span>
+        <i class="fas fa-angle-double-down icon-arrow"></i>
+      </div>
     </nav>
 
     <!-- Page-specific (main) content here -->
