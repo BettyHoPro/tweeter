@@ -8,6 +8,9 @@
   height: 120px;
   width: 100vw;
   color: white;
+  position: fixed;
+  top: 0%;
+
 }
 .nav-logo {
   font-family: 'Bungee', sans-serif;
