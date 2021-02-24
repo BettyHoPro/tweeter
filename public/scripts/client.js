@@ -80,6 +80,7 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+//jQuery must to have document ready
 $(document).ready(function() {
   renderTweets(data);
 });
