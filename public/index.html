@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/article.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -40,7 +41,7 @@
         <i class="fas fa-angle-double-down icon-arrow"></i>
       </div>
     </nav>
-    <header>
+    <header class="header">
       <div>
         <img src="/images/profile-hex.png">
       </div>
@@ -53,7 +54,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <!-- <h2>Compose Tweet</h2> -->
         <form action="/tweets/" method="POST" class="form-newTweet">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" class="tweet-text"></textarea>
@@ -63,7 +64,44 @@
           </div>
         </form>
       </section>
-   
+      <section class="exsit-tweet">
+        <article>
+          <header>
+            <div class="article-left">
+              <img src="/images/user1.png"> 
+              <span class="article-header-text">Alex</span>
+            </div>
+            <span class="article-right">@alex123</span>
+          </header>
+          <p>I ma go to leave Van and get into the jet in 3 hours.✈️ Don't miss me too much, my friends. See you soon. Can't wait to see my babe, love you! ❤️‍🔥</p>
+        <footer>
+          <span class="article-footer-span">10 days ago</span>
+          <div>
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-sync-alt"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+        </footer>
+        </article>
+        <article>
+          <header>
+            <div class="article-left">
+              <img src="/images/user2.png"> 
+              <span class="article-header-text">Ice Cream Man</span>
+            </div>
+            <span class="article-right">@Icecreamshop</span>
+          </header>
+          <p>We have 100 favors ice cream. We are on sale. Whoever got 100 ca ice cream, we wll give you 5% discount. Come here to get whatever favors of ice cream you want.</p>
+        <footer>
+          <span class="article-footer-span">10 days ago</span>
+          <div>
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-sync-alt"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+        </footer>
+        </article>
+      </section>
     </main>
   </body>
 </html>
