@@ -9,6 +9,7 @@ const keyupEvent = function(event) {
   if (countNum.length > 140) {
     // when the number is greater than 140, count number go red
     $(".counter").addClass("count-red");
+    // $(".alert-message").html("You type too many words!");
   } else if (countNum.length < 140) {
     //when the number is less than 140, count number goes black
     $(".counter").removeClass("count-red");

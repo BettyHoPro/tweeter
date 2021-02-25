@@ -28,33 +28,10 @@ const data = [
         "We have 100 favors ice cream. We are on sale. Whoever got 100 ca ice cream, we wll give you 5% discount. Come here to get whatever favors of ice cream you want.",
     },
     created_at: 1493413959088,
-  },
-  {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
-    },
-    content: {
-      text:
-        "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
-    },
-    content: {
-      text: "Je pense , donc je suis",
-    },
-    created_at: 1461113959088,
-  },
+  }
 ];
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
@@ -88,16 +65,29 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 
+// load tweets database from server
+const loadTweets = (result) => {
+  $.ajax({
+    url: '/tweets',
+    method: "GET",
+  }).then((result) => {
+    renderTweets(result);
+  });
+};
+
 //jQuery must to have document ready
 $(document).ready(function () {
   renderTweets(data);
-  const $button = $(".btn-submit");
   $('.form-newTweet').submit(function(event) {
     event.preventDefault();
 
     // we don't need val coz the serialize will get the text only itself
     let newTweet = $('.tweet-text').serialize();
+  
+    //newTweet print out text= KEYIN
+    // if (newTweet.length > 5) {
 
+    // }
     //post the new tweet to server, atm, the exist ones are in the js file itself not in the server yet
     $.ajax({ 
       url: '/tweets',
@@ -105,13 +95,7 @@ $(document).ready(function () {
       data: newTweet
     }).then((result) => {
       //therefore, the new tweet will be the 1st one in the server side and we get it
-      $.ajax({
-        url: '/tweets',
-        method: "GET",
-      }).then((result) => {
-        renderTweets(result);
-      });
+      loadTweets(result);
     });
-
   });
 });
