@@ -28,11 +28,16 @@
   font-family: 'Bungee';
   font-size: 18px;
   color: white;
-  border:1px transparent solid;
+  border:0px transparent solid;
   background-color: #4056A1;
   padding: 8px 18px;
   border-radius:3px;
 }
+
+.btn-submit:hover {
+  box-shadow: 2px 2px 5px 5px rgba(51, 197, 255, 0.748);
+}
+
 .num-submit-counter{
   font-family: 'Bungee';
   color: #222222;

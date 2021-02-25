@@ -71,13 +71,15 @@ const loadTweets = (result) => {
     url: "/tweets",
     method: "GET",
   }).then((result) => {
+    // let sortResult = result.sort((a,b) => { return b[0]['created_at'] < a[0]['created_at'] && 1 || -1;});
+    // //console.log(result);
     renderTweets(result);
   });
 };
 
 //jQuery must to have document ready
 $(document).ready(function () {
-  renderTweets(data);
+  // renderTweets(data);
   $(".form-newTweet").submit(function (event) {
     event.preventDefault();
     const tweetLength = $(this).find("textarea").val().length;
