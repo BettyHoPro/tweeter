@@ -28,10 +28,10 @@ const data = [
         "We have 100 favors ice cream. We are on sale. Whoever got 100 ca ice cream, we wll give you 5% discount. Come here to get whatever favors of ice cream you want.",
     },
     created_at: 1493413959088,
-  }
+  },
 ];
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
@@ -68,7 +68,7 @@ const createTweetElement = function (tweet) {
 // load tweets database from server
 const loadTweets = (result) => {
   $.ajax({
-    url: '/tweets',
+    url: "/tweets",
     method: "GET",
   }).then((result) => {
     renderTweets(result);
@@ -78,24 +78,28 @@ const loadTweets = (result) => {
 //jQuery must to have document ready
 $(document).ready(function () {
   renderTweets(data);
-  $('.form-newTweet').submit(function(event) {
+  $(".form-newTweet").submit(function (event) {
     event.preventDefault();
-
-    // we don't need val coz the serialize will get the text only itself
-    let newTweet = $('.tweet-text').serialize();
-  
-    //newTweet print out text= KEYIN
-    // if (newTweet.length > 5) {
-
-    // }
-    //post the new tweet to server, atm, the exist ones are in the js file itself not in the server yet
-    $.ajax({ 
-      url: '/tweets',
-      method: "POST",
-      data: newTweet
-    }).then((result) => {
-      //therefore, the new tweet will be the 1st one in the server side and we get it
-      loadTweets(result);
-    });
+    const tweetLength = $(this).find("textarea").val().length;
+    if (tweetLength === 0) {
+      alert("Please fill out message!");
+    } else if (tweetLength > 140) {
+      alert("You type too many words!");
+    } else {
+      // we don't need val coz the serialize will get the text only itself
+      let newTweet = $(".tweet-text").serialize();
+      //the textarea will empty once the submit btn got clicked and sent out the data
+      $(this).find("textarea").val("");
+      $(this).find(".counter").html(140);
+      //post the new tweet to server, atm, the exist ones are in the js file itself not in the server yet
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: newTweet,
+      }).then((result) => {
+        //therefore, the new tweet will be the 1st one in the server side and we get it
+        loadTweets(result);
+      });
+    }
   });
 });
