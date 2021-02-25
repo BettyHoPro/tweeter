@@ -4,44 +4,19 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    user: {
-      name: "Alex",
-      avatars: "/images/user1.png",
-      handle: "@alex123",
-    },
-    content: {
-      text:
-        "I ma go to leave Van and get into the jet in 3 hours.✈️ Don't miss me too much, my friends. See you soon. Can't wait to see my babe, love you! ❤️‍🔥",
-    },
-    created_at: 1501113959088,
-  },
-  {
-    user: {
-      name: "Ice Cream Man",
-      avatars: "/images/user2.png",
-      handle: "@Icecreamshop",
-    },
-    content: {
-      text:
-        "We have 100 favors ice cream. We are on sale. Whoever got 100 ca ice cream, we wll give you 5% discount. Come here to get whatever favors of ice cream you want.",
-    },
-    created_at: 1493413959088,
-  },
-];
-
 const renderTweets = function (tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-  tweets.forEach((tweet) => {
+  let sortedTweets = tweets.sort((a,b) =>  b['created_at'] - a['created_at']);
+  $("#tweets-container").empty();
+  sortedTweets.forEach((tweet) => {
     const $tweet = createTweetElement(tweet);
     $("#tweets-container").append($tweet);
   });
 };
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   let $tweet = `<article>
   <header>
     <div class="article-left">
@@ -66,21 +41,19 @@ const createTweetElement = function (tweet) {
 };
 
 // load tweets database from server
-const loadTweets = (result) => {
+const loadTweets = () => {
   $.ajax({
     url: "/tweets",
     method: "GET",
   }).then((result) => {
-    // let sortResult = result.sort((a,b) => { return b[0]['created_at'] < a[0]['created_at'] && 1 || -1;});
-    // //console.log(result);
     renderTweets(result);
   });
 };
 
 //jQuery must to have document ready
-$(document).ready(function () {
-  // renderTweets(data);
-  $(".form-newTweet").submit(function (event) {
+$(document).ready(function() {
+  loadTweets();
+  $(".form-newTweet").submit(function(event) {
     event.preventDefault();
     const tweetLength = $(this).find("textarea").val().length;
     if (tweetLength === 0) {
@@ -98,9 +71,9 @@ $(document).ready(function () {
         url: "/tweets",
         method: "POST",
         data: newTweet,
-      }).then((result) => {
+      }).then(() => {
         //therefore, the new tweet will be the 1st one in the server side and we get it
-        loadTweets(result);
+        loadTweets();
       });
     }
   });
