@@ -48,3 +48,13 @@
 .count-red {
   color: red;
 }
+
+.alert-message {
+  font-size: 30px;
+  font-family: 'sans-serif';
+  text-align:center;
+  color: red;
+  border: 3px red solid;
+  width: 100%;
+  padding: 0.5em;
+}

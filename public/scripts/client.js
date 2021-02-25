@@ -3,8 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const escape =  function(str) {
-  let div = document.createElement('div');
+const escape = function (str) {
+  let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
@@ -13,7 +13,7 @@ const renderTweets = function (tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-  let sortedTweets = tweets.sort((a,b) =>  b['created_at'] - a['created_at']);
+  let sortedTweets = tweets.sort((a, b) => b["created_at"] - a["created_at"]);
   $("#tweets-container").empty();
   sortedTweets.forEach((tweet) => {
     const $tweet = createTweetElement(tweet);
@@ -21,7 +21,7 @@ const renderTweets = function (tweets) {
   });
 };
 
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
   let $tweet = `<article>
   <header>
     <div class="article-left">
@@ -56,16 +56,22 @@ const loadTweets = () => {
 };
 
 //jQuery must to have document ready
-$(document).ready(function() {
+$(document).ready(function () {
   loadTweets();
-  $(".form-newTweet").submit(function(event) {
+  $(".alert-message").hide();
+  $(".form-newTweet").submit(function (event) {
     event.preventDefault();
     const tweetLength = $(this).find("textarea").val().length;
     if (tweetLength === 0) {
-      alert("Please fill out message!");
+      $(".alert-message").slideDown("slow", function () {
+        $(".alert-message").html("🤷 Ops, you forgot fill out message! 🤷");
+      });
     } else if (tweetLength > 140) {
-      alert("You type too many words!");
+      $(".alert-message").slideDown("slow", function () {
+        $(".alert-message").html("🔥 You type too many words! 🔥");
+      });
     } else {
+      $(".alert-message").slideUp();
       // we don't need val coz the serialize will get the text only itself
       let newTweet = $(".tweet-text").serialize();
       //the textarea will empty once the submit btn got clicked and sent out the data
