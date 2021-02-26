@@ -12,3 +12,17 @@
   margin-top: 120px;
 }
 
+@media  only screen and (min-width: 1024px) {
+
+  .header {
+    display: flex;
+    width: 40%;
+    float: left;
+    border: 3em #f4f1ec solid;
+    padding: 8em;
+    justify-content: center;
+    flex-direction: center; 
+    align-content: center; 
+  }
+
+}
