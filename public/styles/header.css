@@ -20,6 +20,7 @@
     float: left;
     font-size: 4rem;
     justify-content: center;
+    flex-direction: center;
     background-color: transparent;
     background-image: none;
   }

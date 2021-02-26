@@ -55,10 +55,26 @@ const loadTweets = () => {
   });
 };
 
+const findNewTweetUp = () => {
+  $(".container").find(".new-tweet").stop().slideUp();
+};
+const findNewTweetDown = () => {
+  $(".container").find(".new-tweet").stop().slideDown();
+};
+
 //jQuery must to have document ready
 $(document).ready(function () {
   loadTweets();
   $(".alert-message").hide();
+  // $(".nav-newTweet").click(function () {
+  //   if ($(".container").find(".new-tweet")) {
+  //     findNewTweetUp();
+  //     $(".nav-newTweet").click(function () {
+  //       findNewTweetDown();
+  //     });
+  //   }
+  // });
+
   $(".form-newTweet").submit(function (event) {
     event.preventDefault();
     const tweetLength = $(this).find("textarea").val().length;
@@ -88,5 +104,4 @@ $(document).ready(function () {
       });
     }
   });
-  
 });
