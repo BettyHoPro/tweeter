@@ -1,7 +1,8 @@
 # Tweeter Project
 
-Tweeter<http://localhost:8080/> is a simple, single-page Twitter practiced project.
-This wep aims for user friendly, mobile first and responsive design for learning purpose during enrolling Lighthouse Labs BootCamp.
+Tweeter<http://localhost:8080/> is a simple, single-page, social-media liked and full stack web app.
+this app is the platform that provides users to post, tweet and share their thoughts and opinions in the social media platform.
+It aims for practicing user friendly, mobile first and responsive design for learning purpose during enrolling Lighthouse Labs BootCamp.
 ## Developer
 
 Betty Ho 
