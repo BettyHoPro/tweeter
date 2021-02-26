@@ -16,10 +16,6 @@
   box-shadow:10px 10px 3px 1px rgb(51, 197, 255, 0.748);
 }
 
-.exsit-tweet article:hover .article-right{
-  opacity: 60%;
-}
-
 .article-left {
   display: flex; 
   align-items: center;
@@ -33,10 +29,9 @@
   max-height: 80px;
 }
 
-.article-right {
+.article-handle {
   font-size: 28px;
   color: #4056A1;
-  opacity: 0%;
 }
 
 .exsit-tweet article header {
@@ -54,7 +49,6 @@
   line-height: 30px;
   background-color: transparent;
   width: 100%;
-  font
 }
 
 .exsit-tweet article footer {
@@ -64,7 +58,26 @@
   width: 100%;
 }
 
-.exsit-tweet article footer i {
-   color:#4056A1; 
-   margin-left: 1em;
+.article-icons {
+  margin-left:0.5em;
+  color: #4056A1; 
+  margin-left: 1em;
+  opacity: 20%;
+}
+
+.exsit-tweet article:hover .article-icons{
+  opacity: 100%;
+}
+
+.exsit-tweet article:hover .fa-heart{
+  color: red;
+}
+
+@media only screen and (min-width: 1024px) {
+  .exsit-tweet article {
+    border: 0px transparent solid;
+  }
+  .exsit-tweet article:hover {
+    box-shadow:10px 10px 3px 1px rgba(32, 132, 172, 0.748);
+  }
 }

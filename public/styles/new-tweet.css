@@ -26,11 +26,11 @@
 
 .btn-submit{
   font-family: 'Bungee';
-  font-size: 18px;
+  font-size: 1.5rem;
   color: white;
   border:0px transparent solid;
   background-color: #4056A1;
-  padding: 8px 18px;
+  padding: 16px 26px;
   border-radius:3px;
 }
 

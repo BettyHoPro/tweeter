@@ -28,17 +28,17 @@ const createTweetElement = function (tweet) {
       <img src="${tweet.user.avatars}"> 
       <span class="article-header-text">${tweet.user.name}</span>
     </div>
-    <span class="article-right">${tweet.user.handle}</span>
+    <span class="article-handle">${tweet.user.handle}</span>
   </header>
   <p>${escape(tweet.content.text)}</p>
 <footer>
   <span class="article-footer-span">${new Date(
     tweet.created_at
   ).toISOString()}</span>
-  <div>
-    <i class="fas fa-flag"></i>
-    <i class="fas fa-sync-alt"></i>
-    <i class="fas fa-heart"></i>
+  <div class="article-icons">
+    <i class="fas fa-flag fa-lg"></i>
+    <i class="fas fa-sync-alt fa-lg"></i>
+    <i class="fas fa-heart fa-lg"></i>
   </div>
 </footer>
 </article>`;
@@ -88,4 +88,5 @@ $(document).ready(function () {
       });
     }
   });
+  
 });
