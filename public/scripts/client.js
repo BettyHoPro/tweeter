@@ -3,13 +3,13 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
@@ -21,7 +21,7 @@ const renderTweets = function (tweets) {
   });
 };
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   let $tweet = `<article>
   <header>
     <div class="article-left">
@@ -55,26 +55,19 @@ const loadTweets = () => {
   });
 };
 
-const findNewTweetUp = () => {
-  $(".container").find(".new-tweet").stop().slideUp();
-};
-const findNewTweetDown = () => {
-  $(".container").find(".new-tweet").stop().slideDown();
-};
-
 //jQuery must to have document ready
-$(document).ready(function () {
+$(document).ready(function() {
   loadTweets();
   $(".alert-message").hide();
-  $(".form-newTweet").submit(function (event) {
+  $(".form-newTweet").submit(function(event) {
     event.preventDefault();
     const tweetLength = $(this).find("textarea").val().length;
     if (tweetLength === 0) {
-      $(".alert-message").slideDown("slow", function () {
+      $(".alert-message").slideDown("slow", function() {
         $(".alert-message").html("🤷 Ops, you forgot fill out message! 🤷");
       });
     } else if (tweetLength > 140) {
-      $(".alert-message").slideDown("slow", function () {
+      $(".alert-message").slideDown("slow", function() {
         $(".alert-message").html("🔥 You type too many words! 🔥");
       });
     } else {

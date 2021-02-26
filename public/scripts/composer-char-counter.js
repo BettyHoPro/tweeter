@@ -5,7 +5,6 @@ $(document).ready(function() {
 
 
 const keyupEvent = function(event) {
- 
   let countNum =  $(this).val();
   if (countNum.length > 140) {
     // when the number is greater than 140, count number go red

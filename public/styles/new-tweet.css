@@ -2,7 +2,7 @@
   display:flex;
   flex-direction: column;
   margin-top: 1.5em;
-  font-size: 30px;
+  font-size: 1.2em;
   font-family: sans-serif;
 }
 
@@ -34,6 +34,7 @@
   border-radius:3px;
 }
 
+/* btn hover */
 .btn-submit:hover {
   box-shadow: 2px 2px 5px 5px rgba(51, 197, 255, 0.748);
 }
@@ -41,7 +42,7 @@
 .num-submit-counter{
   font-family: 'Bungee';
   color: #222222;
-  font-size: 24px;
+  font-size: 1rem;
   padding-bottom: 4px;
 }
 
@@ -51,10 +52,11 @@
 
 .alert-message {
   font-size: 30px;
-  font-family: 'sans-serif';
+  font-family: 'Source Sans Pro', sans-serif;
   text-align:center;
   color: red;
   border: 3px red solid;
+  border-radius: 10px;
   width: 100%;
   padding: 0.5em;
 }

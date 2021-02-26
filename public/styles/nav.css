@@ -24,21 +24,21 @@
   font-size: 1.5em;
 }
 
-.nav-newTweet:active {
-
-}
-
 .nav-newTweet i {
   padding-top: 0.2em;
   color: red;
   position: relative; 
   animation: arrowRun 1s linear 0s infinite alternate-reverse;
 }
+/* animation setting */
 @keyframes arrowRun {
   0% { transform: translateY(0px);} 
   100% { transform: translateY(20px);} 
 } 
 
+/*
+ * tablet and smart phone version
+ */
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
   .nav-bar {

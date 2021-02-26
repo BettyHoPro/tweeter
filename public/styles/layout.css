@@ -16,7 +16,6 @@ html {
  * Global layout stuff
  */
 
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -36,6 +35,9 @@ body {
   margin-bottom: 20px;
 }
 
+/*
+ * desktop version
+ */
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
