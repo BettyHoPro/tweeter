@@ -18,3 +18,5 @@ const keyupEvent = function(event) {
   // syn remain text number which allows to fill to front-end
   $(".counter").html(140 - countNum.length);
 };
+
+

@@ -66,15 +66,6 @@ const findNewTweetDown = () => {
 $(document).ready(function () {
   loadTweets();
   $(".alert-message").hide();
-  // $(".nav-newTweet").click(function () {
-  //   if ($(".container").find(".new-tweet")) {
-  //     findNewTweetUp();
-  //     $(".nav-newTweet").click(function () {
-  //       findNewTweetDown();
-  //     });
-  //   }
-  // });
-
   $(".form-newTweet").submit(function (event) {
     event.preventDefault();
     const tweetLength = $(this).find("textarea").val().length;

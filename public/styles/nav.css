@@ -23,6 +23,11 @@
   align-items: center;
   font-size: 1.5em;
 }
+
+.nav-newTweet:active {
+
+}
+
 .nav-newTweet i {
   padding-top: 0.2em;
   color: red;
@@ -37,14 +42,22 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
   .nav-bar {
+   color: #4056A1;
    background-color: transparent;
+  }
+  .nav-logo {
+    margin-top: -0.8em;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 767px){
   .nav-bar {
+   color: #4056A1;
    background-color: transparent;
    padding: 1rem 1rem;
+  }
+  .nav-logo {
+    margin-top: -0.8em;
   }
 }
 

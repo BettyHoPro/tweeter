@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/article.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -33,16 +34,17 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
-  <body>
+  <body id="top-page">
     <!-- Top nav bar (fixed) -->
-    <div class="mobile-header-background"></div>
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="top-page">
       <div class="nav-logo">
         <span>Tweeter</span>
       </div>
-      <div class="nav-newTweet"> 
+      <div class="nav-newTweet" > 
         <span><strong>Write</strong> a new tweet</span>
-        <i class="fas fa-angle-double-down icon-arrow"></i>
+        <a href="#top-page">
+          <i class="fas fa-angle-double-down icon-arrow"></i>
+        </a>
       </div>
     </nav>
     
@@ -54,12 +56,11 @@
       <div>
         <span><b>Betty</b> Ho</span>
       </div>
-    <!-- </div> -->
     </header> 
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section class="new-tweet" id="new-tweetArea">
         <form action="/tweets/" method="POST" class="form-newTweet">
           <p class="alert-message"></p>
           <label for="tweet-text">What are you humming about?</label>
@@ -73,5 +74,12 @@
       <section class="exsit-tweet" id="tweets-container">
       </section>
     </main>
+
+    <!-- Footer -->
+    <a class="back-top" href="#top-page"> 
+      <footer class="index-footer">
+        <p>Top</p> 
+      </footer>
+    </a>
   </body>
 </html>

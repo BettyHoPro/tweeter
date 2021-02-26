@@ -1,0 +1,17 @@
+.index-footer {
+  background-color: #4056A1;
+  border-radius: 70px;
+  color: white;
+  position: fixed;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Bungee', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  height: 100px;
+  bottom: 40px;
+  right: 10px;
+  width: 100px;
+  z-index: 1;
+}
