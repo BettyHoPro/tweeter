@@ -1,16 +1,18 @@
 # Tweeter Project
 
 Tweeter<http://localhost:8080/> is a simple, single-page, social-media liked and full stack web app.
-this app is the platform that provides users to post, tweet and share their thoughts and opinions in the social media platform.
+
+This app is the platform that provides users to post, tweet and share their thoughts and opinions.
+
 It aims for practicing user friendly, mobile first and responsive design for learning purpose during enrolling Lighthouse Labs BootCamp.
 ## Developer
 
-Betty Ho 
+Betty Ho, Lighthouse Labs 
 
 ## Designer
 
-Betty Ho 
-LightHouse labs
+Betty Ho, 
+Lighthouse labs
 ## Skills
 
 CSS, Ajax, Jquery, Html, Javascript, UI Design, Illustration
