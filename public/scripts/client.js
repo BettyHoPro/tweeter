@@ -98,8 +98,7 @@ const loadTweets = () => {
   });
 };
 
-//
-
+//helper function to check the new submit tweet's length for slide down/up the appropriate error message
 const tweetLengthCheck = () => {
   const tweetLength = $(".form-newTweet").find("textarea").val().length;
   if (tweetLength === 0) {
