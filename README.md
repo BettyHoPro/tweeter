@@ -20,28 +20,28 @@ CSS, Ajax, Jquery, Html, Javascript, UI Design, Illustration
 ## Final Product
 
 The page of desktop version - index
-!["The page of desktop version - index"](https://github.com/BettyHoPro/tweeter-main/blob/master/doc/desktop-v-1.png)
+!["The page of desktop version - index"](https://github.com/BettyHoPro/tweeter-main/blob/master/public/docs/desktop-v-1.png)
 
 The page of desktop version - scroll up
-!["The page of desktop version - scroll up"](https://github.com/BettyHoPro/tweeter-main/blob/master/doc/desktop-v-2.png)
+!["The page of desktop version - scroll up"](https://github.com/BettyHoPro/tweeter-main/blob/master/public/docs/desktop-v-2.png)
 
 The page of desktop version - different size
-!["The page of desktop version - different size"](https://github.com/BettyHoPro/tweeter-main/blob/master/doc/desktop-v-3.png)
+!["The page of desktop version - different size"](https://github.com/BettyHoPro/tweeter-main/blob/master/public/docs/desktop-v-3.png)
 
 The page of tablet version - index
-!["The page of tablet version - index"](https://github.com/BettyHoPro/tweeter-main/blob/master/doc/tablet-v-1.png)
+!["The page of tablet version - index"](https://github.com/BettyHoPro/tweeter-main/blob/master/public/docs/tablet-v-1.png)
 
 The page of tablet version - scroll up
-!["The page of tablet version - scroll up"](https://github.com/BettyHoPro/tweeter-main/blob/master/doc/tablet-v-2.png)
+!["The page of tablet version - scroll up"](https://github.com/BettyHoPro/tweeter-main/blob/master/public/docs/tablet-v-2.png)
 
 The page of mobile version - index
-!["The page of mobile version - index"](https://github.com/BettyHoPro/tweeter-main/blob/master/doc/mobile-v-1.png)
+!["The page of mobile version - index"](https://github.com/BettyHoPro/tweeter-main/blob/master/public/docs/mobile-v-1.png)
 
 The page of mobile version - scroll up
-!["The page of mobile version - scroll up"](https://github.com/BettyHoPro/tweeter-main/blob/master/doc/mobile-v-2.png)
+!["The page of mobile version - scroll up"](https://github.com/BettyHoPro/tweeter-main/blob/master/public/docs/mobile-v-2.png)
 
 The snap shot of textarea error message
-!["The snap shot of textarea error message"](https://github.com/BettyHoPro/tweeter-main/blob/master/doc/error-message.png)
+!["The snap shot of textarea error message"](https://github.com/BettyHoPro/tweeter-main/blob/master/public/docs/error-message.png)
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
