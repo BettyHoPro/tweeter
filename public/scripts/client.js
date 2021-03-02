@@ -21,11 +21,12 @@ const renderTweets = function (tweets) {
   });
 };
 
+
+
 // helper function for postedTime function
 const checkNeedS = (unit) => {
-  return unit >= 2 && "s" || "";
+  return (unit >= 2 && "s") || "";
 };
-
 
 // count how long it has been post
 const postedTime = (time) => {
@@ -47,18 +48,21 @@ const postedTime = (time) => {
     return time;
   } else {
     if (checkDay > 365) {
-      return `${ checkYear } year${ checkNeedS(checkYear) } ago`;
+      return `${checkYear} year${checkNeedS(checkYear)} ago`;
     } else if (checkDay < 365 && checkDay > 31) {
-      return `${ checkMonth } month${ checkNeedS(checkMonth) } ago`;
+      return `${checkMonth} month${checkNeedS(checkMonth)} ago`;
     } else if (checkDay < 31 && checkDay > 7) {
-      return `${ checkWeek } week${ checkNeedS(checkWeek) } ago`;
+      return `${checkWeek} week${checkNeedS(checkWeek)} ago`;
     } else if (checkDay < 7 && checkDay > 0) {
-      return `${ checkDay } day${ checkNeedS(checkDay) } ago`;
+      return `${checkDay} day${checkNeedS(checkDay)} ago`;
     } else {
       if (checkHour < 24 && checkHour > 0) {
-        return `${ checkHour } hour${ checkNeedS(checkHour) } ago`;
+        return `${checkHour} hour${checkNeedS(checkHour)} ago`;
       } else {
-        return `${ checkMin >= 1 && (`${ checkMin } minute${ checkNeedS(checkMin) } ago`) || "Just now" }`;
+        return `${
+          (checkMin >= 1 && `${checkMin} minute${checkNeedS(checkMin)} ago`) ||
+          "Just now"
+        }`;
       }
     }
   }
@@ -75,9 +79,7 @@ const createTweetElement = function (tweet) {
   </header>
   <p>${escape(tweet.content.text)}</p>
 <footer>
-  <span class="article-footer-span">${postedTime(
-    tweet.created_at
-  )}</span>
+  <span class="article-footer-span">${postedTime(tweet.created_at)}</span>
   <div class="article-icons">
     <i class="fas fa-flag fa-lg"></i>
     <i class="fas fa-sync-alt fa-lg"></i>
@@ -128,10 +130,26 @@ const tweetLengthCheck = () => {
   }
 };
 
+const findNewTweetUp = () => {
+  $(".container").find(".new-tweet").stop().slideUp();
+};
+const findNewTweetDown = () => {
+  $(".container").find(".new-tweet").stop().slideDown();
+};
+
 //jQuery must to have document ready
 $(document).ready(function () {
   loadTweets();
   $(".alert-message").hide();
+
+  $(".nav-newTweet").click(function () {
+    const $newTweet  = $(".container").find(".new-tweet");
+    if($newTweet.css('display') === 'none'){
+      findNewTweetDown();
+    }else{
+      findNewTweetUp();
+    }
+  });
   $(".form-newTweet").submit(function (event) {
     event.preventDefault();
     tweetLengthCheck();
