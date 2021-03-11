@@ -144,9 +144,9 @@ $(document).ready(function () {
 
   $(".nav-newTweet").click(function () {
     const $newTweet  = $(".container").find(".new-tweet");
-    if($newTweet.css('display') === 'none'){
+    if ($newTweet.css('display') === 'none') {
       findNewTweetDown();
-    }else{
+    } else {
       findNewTweetUp();
     }
   });
