@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeterhttp://localhost:8080/ is a simple, single-page, social-media liked and full-stack web app.
+Tweeter http://localhost:8080/ is a simple, single-page, social-media liked and full-stack web app.
 This app is the platform that provides users to post, tweet and shares their thoughts and opinions.
 It aims to practice user-friendly, mobile-first and responsive design for learning purposes during enrolling in Lighthouse Labs BootCamp.
 ## Developer
