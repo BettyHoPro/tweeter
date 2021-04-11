@@ -1,10 +1,8 @@
 # Tweeter Project
 
-Tweeter<http://localhost:8080/> is a simple, single-page, social-media liked and full stack web app.
-
-This app is the platform that provides users to post, tweet and share their thoughts and opinions.
-
-It aims for practicing user friendly, mobile first and responsive design for learning purpose during enrolling Lighthouse Labs BootCamp.
+Tweeterhttp://localhost:8080/ is a simple, single-page, social-media liked and full-stack web app.
+This app is the platform that provides users to post, tweet and shares their thoughts and opinions.
+It aims to practice user-friendly, mobile-first and responsive design for learning purposes during enrolling in Lighthouse Labs BootCamp.
 ## Developer
 
 Betty Ho, Lighthouse Labs 
@@ -15,7 +13,7 @@ Betty Ho,
 Lighthouse labs
 ## Skills
 
-CSS, Ajax, Jquery, Html, Javascript, UI Design, Illustration
+CSS, Ajax, jQuery, Html, Javascript, UI Design, Illustration
 
 ## Final Product
 
